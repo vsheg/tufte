@@ -77,3 +77,8 @@ header nav a:focus-visible,
         background: rgba(255, 255, 255, 0.10);
     }
 }
+
+/* TODO: remove hack for math zooming */
+figure[role="math"] {
+    zoom: 1.4;
+}
