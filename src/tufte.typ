@@ -1,6 +1,7 @@
 #import "math.typ": template-math
 #import "refs.typ": template-refs
 #import "notes.typ": template-notes
+#import "figures.typ": template-figures
 
 #let make-header(links) = html.elem(
   "header",
@@ -17,6 +18,7 @@
   show: template-math
   show: template-refs
   show: template-notes
+  show: template-figures
 
   html.elem("html", {
     // Head

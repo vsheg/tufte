@@ -1,6 +1,8 @@
 #import "../index.typ": template
 #show: template
 
+#import "@preview/lilaq:0.5.0" as lq
+
 = The Normal Distribution
 
 The normal distribution, often called the Gaussian distribution or bell curve, is one of the most fundamental concepts in statistics and probability theory @degroot2012probability. Its characteristic symmetric, bell-shaped curve appears throughout nature and human activity, from heights and test scores to measurement errors and biological variations.
@@ -14,6 +16,25 @@ The probability density function is given by:
 $ f(x) = 1/(sigma sqrt(2pi)) e^(-(x-mu)^2/(2sigma^2)) $
 
 This formula, developed by Gauss in his astronomical work @gauss1809theoria, has become foundational to modern statistics @stigler1982gauss.
+
+
+#{
+  let diagram = html.frame(lq.diagram(
+    xaxis: (subticks: none),
+    yaxis: (subticks: none),
+    lq.bar(
+      range(-7, 8).map(x => x / 2.0),
+      range(-7, 8).map(x => {
+        let z = x / 2.0
+        calc.exp(-z * z / 2) / calc.sqrt(2 * calc.pi)
+      }),
+      fill: blue.lighten(50%),
+    ),
+  ))
+
+  figure(caption: [Normal distribution], diagram)
+}
+
 
 == Why It Matters
 
