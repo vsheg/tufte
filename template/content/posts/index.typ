@@ -1,14 +1,13 @@
 #import "../index.typ": template
-
 #show: template
 
 = Posts
 
 == 2025
 
-- #link("1-normal-distribution/")[Normal Distribution]
-- #link("2-post")[Post 2]
+- #link("2025-10-30-normal-distribution/")[Normal Distribution]
+- #link("2025-04-16-monkeys-apes/")[Monkeys vs Apes]
 
 == 2024
 
-- #link("3-post")[Post 3]
+- #link("2024-10-04-iterators-generators/")[Iterators vs Generators in Python]
