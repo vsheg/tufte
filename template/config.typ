@@ -2,6 +2,7 @@
 
 #let template = tufted-web.with(
   header-links: (
+    "/": "Home",
     "/posts/": "Posts",
     "/about/": "About",
   ),
