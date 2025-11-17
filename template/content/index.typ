@@ -11,6 +11,10 @@ This package allows you to build a simple website with *pure* Typst. No dependen
   image("imgs/tufted-duck-male.webp")
 })
 
+#margin-note[
+  The tufted duck (_Aythya fuligula_) is a medium-sized diving duck native to Eurasia. Known for its diving ability, it can plunge to great depths to forage for food.
+]
+
 == Copy template
 
 ```shell
