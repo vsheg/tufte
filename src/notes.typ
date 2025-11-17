@@ -9,6 +9,3 @@
   content
 }
 
-#let marginnote(content) = {
-  html.span(class: "marginnote", content)
-}

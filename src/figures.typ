@@ -1,4 +1,4 @@
-#import "notes.typ": marginnote
+#import "layout.typ": margin-note
 
 #let template-figures(content) = {
   // Redefine figure caption to use marginnote
