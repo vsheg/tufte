@@ -1,0 +1,18 @@
+/* POST TILES */
+.post-tile {
+    margin: 0 0 1rem;
+}
+
+.post-tile a {
+    display: inline-block;
+    padding: 0.1em 0.2em;
+    background-image: none !important;
+}
+
+.post-tile h3 {
+    margin: 0;
+}
+
+.post-tile p {
+    margin: 0.25rem 0 0;
+}

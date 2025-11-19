@@ -1,5 +1,7 @@
+/* TODO: Remove `@import` to improve performance */
 @import url("navbar.css");
 @import url("dark.css");
+@import url("tiles.css");
 
 /* base font size */
 html {
@@ -26,8 +28,10 @@ figure[role="math"] {
         display: block;
         float: none;
         position: static;
-        width: 90%;
-        margin: 0.5em 0 0.5em auto;
+        padding-left: 1.2rem;
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 1em;
     }
 
     /* Limit image width on narrow screens */
@@ -42,4 +46,5 @@ figure[role="math"] {
     p {
         hyphens: auto !important;
     }
+
 }
