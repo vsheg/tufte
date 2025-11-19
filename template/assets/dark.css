@@ -1,0 +1,6 @@
+/* night mode: invert media inside math figures for better contrast */
+@media (prefers-color-scheme: dark) {
+    [role="math"] {
+        filter: invert(1) hue-rotate(180deg);
+    }
+}

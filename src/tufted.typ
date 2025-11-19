@@ -29,7 +29,7 @@
   set text(lang: lang)
 
   html.html(
-    lang: lang, // NOTE: Typst ignores this for now, so hyphenation may not work properly
+    lang: lang,
     {
       // Head
       html.head({
