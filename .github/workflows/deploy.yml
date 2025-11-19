@@ -18,14 +18,17 @@ jobs:
     steps:
       - uses: actions/checkout@v5
       - uses: typst-community/setup-typst@v4
-      - run: make link
+      - uses: actions/setup-go@v6
+      - run: go install github.com/tdewolff/minify/v2/cmd/minify@latest
       - run: |
+          make link
           cd template
           make html
+          minify -r -o _site_min/ _site/
       - uses: actions/configure-pages@v4
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: template/_site
+          path: template/_site_min
 
   deploy:
     runs-on: ubuntu-latest
