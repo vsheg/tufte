@@ -1,0 +1,30 @@
+:root {
+    --note-highlight-color: rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --note-highlight-color: rgba(255, 255, 255, 0.10);
+    }
+}
+
+/* Highlight the margin note when the footnote reference is hovered */
+.footnote-ref:hover+.marginnote {
+    background-color: var(--note-highlight-color);
+    box-shadow: 0 0 0 5px var(--note-highlight-color);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 1px;
+}
+
+/* Highlight the footnote reference when the margin note is hovered */
+.footnote-ref:has(+ .marginnote:hover) {
+    background-color: var(--note-highlight-color);
+    box-shadow: 0 0 0 5px var(--note-highlight-color);
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+}
+
+a.footnote-ref-link {
+    /* Remove footnote link underline */
+    background-image: none;
+}
