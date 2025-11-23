@@ -1,7 +1,9 @@
 name: Deploy
 
 on:
-  workflow_dispatch: # Manual trigger only
+  workflow_dispatch: # Manual trigger
+  push:
+    branches: [main]
 
 permissions:
   contents: read
