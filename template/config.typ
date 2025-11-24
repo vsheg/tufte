@@ -6,7 +6,6 @@
     "/docs/": "Docs",
     "/blog/": "Blog",
     "/cv/": "CV",
-    "/about/": "About",
   ),
   title: "Tufted",
 )
