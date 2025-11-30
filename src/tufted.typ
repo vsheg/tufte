@@ -17,7 +17,7 @@
   title: "Tufted",
   lang: "en",
   global-css: "https://cdnjs.cloudflare.com/ajax/libs/tufte-css/1.8.0/tufte.min.css",
-  local-css: "/assets/style.css",
+  local-css: "/assets/tufted.css",
   content,
 ) = {
   // Apply styling
