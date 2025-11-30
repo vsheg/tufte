@@ -91,20 +91,25 @@ header nav a:focus-visible {
 FOOTNOTES AND MARGIN NOTES
 *******************************************************************************/
 
+.footnote-ref,
+.footnote-ref+.marginnote {
+    --highlight: transparent;
+    background-color: var(--highlight);
+    box-shadow: 0 0 0 5px var(--highlight);
+    border-radius: var(--radius-sm);
+    transition: background-color 0.3s ease 1s, box-shadow 0.3s ease 1s;
+}
+
 /* Highlight margin note when footnote reference is hovered */
 .footnote-ref:hover+.marginnote {
-    background-color: var(--highlight-weak);
-    box-shadow: 0 0 0 5px var(--highlight-weak);
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-    border-radius: var(--radius-sm);
+    --highlight: var(--highlight-weak);
+    transition-delay: 0s;
 }
 
 /* Highlight footnote reference when margin note is hovered */
 .footnote-ref:has(+ .marginnote:hover) {
-    background-color: var(--highlight-strong);
-    box-shadow: 0 0 0 5px var(--highlight-strong);
-    transition: background-color 0.2s ease, box-shadow 0.2s ease;
-    border-radius: var(--radius-sm);
+    --highlight: var(--highlight-strong);
+    transition-delay: 0s;
 }
 
 a.footnote-ref-link {
