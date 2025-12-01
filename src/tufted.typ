@@ -5,11 +5,13 @@
 #import "layout.typ": full-width, margin-note
 
 #let make-header(links) = html.header(
-  html.nav(
-    for (href, title) in links {
-      html.a(href: href, title)
-    },
-  ),
+  if links != none {
+    html.nav(
+      for (href, title) in links {
+        html.a(href: href, title)
+      },
+    )
+  },
 )
 
 #let tufted-web(
